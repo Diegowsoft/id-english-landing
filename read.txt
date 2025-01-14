@@ -1,0 +1,54 @@
+# README.md
+
+# ID English Landing Page
+
+Este projeto é uma landing page moderna e responsiva para a ID English, focada em ensinar inglês de forma rápida e eficiente. A página inclui um cabeçalho atraente, um formulário de contato e seções que destacam as características do serviço.
+
+## Estrutura do Projeto
+
+```
+id-english-landing
+├── src
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── style.css
+│   │   │   └── reset.css
+│   │   └── js
+│   │       └── main.js
+│   ├── components
+│   │   ├── header.html
+│   │   ├── features.html
+│   │   ├── form.html
+│   │   └── footer.html
+│   └── index.html
+├── .gitignore
+└── README.md
+```
+
+## Tecnologias Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+
+## Instruções de Configuração
+
+1. Clone o repositório:
+   ```
+   git clone <URL_DO_REPOSITORIO>
+   ```
+
+2. Navegue até o diretório do projeto:
+   ```
+   cd id-english-landing
+   ```
+
+3. Abra o arquivo `src/index.html` em um navegador para visualizar a landing page.
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com melhorias ou correções. Para isso, crie um fork do repositório e envie um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.
