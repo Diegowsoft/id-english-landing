@@ -202,6 +202,23 @@ body {
     }
 }
 
+/* Media Query para Mobile */
+@media screen and (max-width: 768px) {
+    .who-we-are-grid {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+    }
+    
+    /* Imagem aparece primeiro */
+    .who-we-are-grid img {
+        order: -1;
+    }
+    
+    /* Texto aparece depois */
+    .who-we-are-text {
+        order: 1;
+    }
+}
+
 /* FIM QUEM SOMOS */
 /* FORMULÁRIO */
 form {
@@ -428,12 +445,18 @@ form button:hover {
     header p {
         font-size: 1rem;
     }
-
+    .about-section {
+        order: 1;
+    }
+    .about-image{
+        order: -1;
+    }
+    
     .about-grid,
     .ebook-grid {
         grid-template-columns: 1fr;
     }
-    .about-section .about-text {
+    .about-section .about-text h2 {
         display: none;
     }
 }
