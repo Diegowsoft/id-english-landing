@@ -14,6 +14,9 @@ body {
     color: #101820;
     background-color: #fff;
 }
+.hero-section, .who-we-are p{
+   text-align: justify;
+}
 /* IMAGEM HEADER */
 
 .hero-section {
@@ -245,7 +248,6 @@ body {
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     align-items: center;
 }
 
@@ -276,6 +278,18 @@ body {
         grid-template-columns: 1fr;
     }
     
+    .who-we-are-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        /* padding: 0; */
+    }
+    
+    .who-we-are-image,
+    .about-image {
+        margin: 0px -20px;
+    }
+
     .who-we-are {
         padding: 40px 20px;
     }
