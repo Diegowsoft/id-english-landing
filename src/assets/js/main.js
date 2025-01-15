@@ -15,27 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function validateForm() {
-        let valid = true;
-
-        if (nameInput.value.trim() === '') {
-            alert('Por favor, insira seu nome.');
-            valid = false;
-        }
-
-        if (emailInput.value.trim() === '' || !validateEmail(emailInput.value)) {
-            alert('Por favor, insira um email válido.');
-            valid = false;
-        }
-
-        if (whatsappInput.value.trim() === '') {
-            alert('Por favor, insira seu número de WhatsApp.');
-            valid = false;
-        }
-
-        return valid;
-    }
-
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());
