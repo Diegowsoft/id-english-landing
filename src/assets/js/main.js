@@ -78,3 +78,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Máscara para número de WhatsApp
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappInput = document.querySelector('#whatsapp');
+    
+    whatsappInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, ''); // Remove não-números
+        
+        if (value.length > 11) {
+            value = value.slice(0, 11);
+        }
+        
+        if (value.length > 0) {
+            value = '(' + value;
+            
+            if (value.length > 3) {
+                value = value.slice(0, 3) + ') ' + value.slice(3);
+            }
+            
+            if (value.length > 10) {
+                value = value.slice(0, 10) + '-' + value.slice(10);
+            }
+        }
+        
+        e.target.value = value;
+    });
+    
+    whatsappInput.addEventListener('keypress', function(e) {
+        if (!/\d/.test(e.key)) {
+            e.preventDefault();
+        }
+    });
+});
