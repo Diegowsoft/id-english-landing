@@ -72,7 +72,6 @@
             background-color: #4CAF50;
             color: white;
             padding: 1rem 2rem;
-            margin-bottom: 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
@@ -107,6 +106,36 @@
                 max-width: 300px;
             }
         }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #ffbe0a;
+            color: #fff;
+            padding: 15px 50px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            /* background-color: #ffbe0a; */
+            color: #101820;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 190, 10, 0.3);
+        }
+
+        .back-btn i {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -123,6 +152,12 @@
             <i class="fas fa-download"></i>
             Baixar E-book
         </a>
+        <div class="button-container">
+            <a href="../index.html" class="back-btn" data-aos="fade-up" data-aos-delay="800">
+                <i class="fas fa-arrow-left"></i>
+                Página inicial
+            </a>
+        </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
