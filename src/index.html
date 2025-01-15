@@ -25,10 +25,18 @@
         </nav>
     </header> -->
 
-    <div class="hero-section">
+    <div class="hero-section" id="home">
         <div class="hero-content">
-            <h1>Aprenda Inglês de Forma Eficiente</h1>
-            <p>Método personalizado para suas necessidades</p>
+            <picture>
+                <source 
+                    media="(max-width: 768px)" 
+                    srcset="assets/img/header-cover-mobile.png"
+                >
+                <img 
+                    src="assets/img/header-cover.png" 
+                    alt="header cover"
+                >
+            </picture>
         </div>
     </div>
 
@@ -44,13 +52,12 @@
                 <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
                 <li><a href="#who-we-are"><i class="fas fa-users"></i> Quem Somos</a></li>
                 <li><a href="#features"><i class="fas fa-star"></i> Diferenciais</a></li>
-                <li><a href="#ebook"><i class="fas fa-book"></i> E-book</a></li>
-                <li><a href="#contact" class="cta-button"><i class="fas fa-envelope"></i> Contato</a></li>
+                <li><a href="#form-section" class="cta-button"><i class="fas fa-envelope"></i> Contato</a></li>
             </ul>
         </nav>
     </header>
 
-<section class="who-we-are">
+<section class="who-we-are" id="who-we-are">
     <div class="container">
         <h2>Quem Somos?</h2>
         <div class="who-we-are-grid">
@@ -133,7 +140,7 @@
             <div class="container">
                 <div class="ebook-grid">
                     <div class="ebook-image">
-                        <img src="./assets/img/ebook-cover.avif" alt="eBook Capa">
+                        <img src="./assets/img/ebook-cover.avif" alt="eBook Capa" style="border-radius:  5px;">
                     </div>
                     <div class="ebook-content">
                         <h2>🚀 Baixe GRÁTIS o eBook</h2>
@@ -149,21 +156,31 @@
             </div>
         </section>
         
-        <section class="form-section">
+        <section class="form-section" id="form-section">
             <form class="landing-form">
-                <h2>Entre em Contato</h2>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-        
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-        
-                <label for="whatsapp">WhatsApp:</label>
-                <input type="tel" id="whatsapp" name="whatsapp" required>
-        
-                <button type="submit">Enviar</button>
+                <div class="form-header">
+                    <i class="fas fa-gift form-icon"></i>
+                    <h2>Ganhe um E-book Grátis!</h2>
+                    <p class="form-subtitle">Preencha o formulário e receba seu e-book "10 Dicas para Aprender Inglês" gratuitamente</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+                </div>
+
+                <button type="submit">QUERO MEU E-BOOK GRÁTIS <i class="fas fa-arrow-right"></i></button>
             </form>
-            <script src="./assets/js/main.js"></script>
         </section>
     </main>
     
