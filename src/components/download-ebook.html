@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download E-book - Obrigado!</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #101820;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .hero-ebook {
+            width: 100%;
+            min-height: 50vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.9));
+            padding: 2rem;
+        }
+
+        .hero-ebook img {
+            max-width: 25rem;
+            height: auto;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ffbe0a;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .message {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .hero-ebook img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="hero-ebook" data-aos="fade-down">
+            <img src="../assets/img/ebook-cover.png" alt="E-book" data-aos="zoom-in">
+        </div>
+        <p class="message" data-aos="fade-up" data-aos-delay="300">
+            Seu e-book "10 Dicas para Aprender Inglês" está pronto para download.
+            Clique no botão abaixo para baixar!
+        </p>
+        <a href="../assets/downloads/ebook.pdf" class="download-btn" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-download"></i>
+            Baixar E-book
+        </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function iniciarDownload() {
+            const link = document.createElement('a');
+            link.href = '../assets/downloads/ebook.pdf';
+            link.download = 'ID-English-Ebook.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Adicionar listeners
+        document.querySelector('.download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            iniciarDownload();
+        });
+
+        document.querySelector('.hero-ebook img').addEventListener('click', function() {
+            iniciarDownload();
+        });
+
+        // AOS init
+        window.addEventListener('load', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                mirror: false,
+                offset: 50
+            });
+        });
+    </script>
+</body>
+</html>

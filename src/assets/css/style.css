@@ -1,4 +1,5 @@
 /* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +11,11 @@ html {
 }
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     color: #101820;
     background-color: #fff;
 }
+
 .hero-section, .who-we-are p{
    text-align: justify;
 }
