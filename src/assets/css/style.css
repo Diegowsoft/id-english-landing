@@ -20,7 +20,7 @@ body {
 /* IMAGEM HEADER */
 
 .hero-section {
-    height: 90vh;
+    height: 90dvh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ body {
 
 .hero-content img {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 90dvh;
     width: auto;
     height: auto;
     object-fit: fill;
@@ -60,7 +60,7 @@ body {
 @media (max-width: 768px) {
     .hero-section {
         height: auto;
-        min-height: 70vh;
+        min-height: 70dvh;
         padding: 20px 0;
         object-fit: cover;
     } 
@@ -74,7 +74,7 @@ body {
     }
 
     .hero-content img {
-        max-height: 70vh;
+        max-height: 70dvh;
         width: 100%;
     }
 }
