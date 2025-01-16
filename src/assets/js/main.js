@@ -1,33 +1,17 @@
 // Este arquivo contém o código JavaScript para interatividade, incluindo animações e validação de formulário.
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    const nameInput = document.querySelector('#name');
-    const emailInput = document.querySelector('#email');
-    const whatsappInput = document.querySelector('#whatsapp');
+        // Função para mostrar animação de carregamento no botão de submit
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const submitButton = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        if (validateForm()) {
-            alert('Formulário enviado com sucesso!');
-            form.reset();
-        }
-    });
+            form.addEventListener('submit', function(e) {
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Enviando... <i class="fas fa-spinner fa-spin"></i>';
+            });
+        });
 
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        if (validateForm()) {
-            // Redirecionar para página de download
-            window.location.href = '/download-ebook.html';
-        }
-    });
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -56,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
         });
     });
-});
 
 // Máscara para número de WhatsApp
 document.addEventListener('DOMContentLoaded', function() {
